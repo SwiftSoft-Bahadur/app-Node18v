@@ -13,10 +13,10 @@ export class AppService {
   constructor(private http: HttpClient) {}
 
   addMedicine(medicine: Medicine): Observable<any> {
-    return this.http.post(`${this.apiUrl}/api/medi`, medicine);
+    return this.http.post(`${this.apiUrl}/medi`, medicine);
   }
 
   getMedicine(): Observable<Medicine[]> {
-    return this.http.get<Medicine[]>(`${this.apiUrl}/api/medi`);
+    return this.http.get<Medicine[]>(`${this.apiUrl}/medi`);
   }
 }
