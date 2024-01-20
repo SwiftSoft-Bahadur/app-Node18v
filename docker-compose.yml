@@ -2,6 +2,7 @@ version: '3'
 
 services:
   frontend-app:
+    image: node18-img  # Replace with your desired image name
     build:
       context: .
       dockerfile: Dockerfile  # Replace with your actual Dockerfile name
@@ -9,7 +10,7 @@ services:
       - "8082:80"
     networks:
       - allNet
-
+      
   nginx-reverse-proxy:
     image: nginx
     ports:
