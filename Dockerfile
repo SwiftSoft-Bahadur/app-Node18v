@@ -25,7 +25,7 @@ FROM nginx:latest
 COPY --from=build /usr/local/app/dist/app-node18v/browser /usr/share/nginx/html
 
 # Copy custom nginx.conf file
-# COPY nginx.conf /etc/nginx/nginx.conf
+COPY nginx.conf /etc/nginx/nginx.conf
 
 # Expose port 80
 EXPOSE 80
