@@ -7,14 +7,7 @@ services:
       - "8082:80"
     networks:
       - allNet
-
-  backend-api:
-    image: appnodebackend
-    ports:
-      - "3000:3000"
-    networks:
-      - allNet
-
+      
   nginx-reverse-proxy:
     image: nginx
     ports:

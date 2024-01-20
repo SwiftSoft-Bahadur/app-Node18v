@@ -9,7 +9,9 @@ import { environment } from '../environments/environment';
 })
 export class AppService {
 
+  // proxy url
   private apiUrl = environment.apiUrl;
+
   constructor(private http: HttpClient) {}
 
   addMedicine(medicine: Medicine): Observable<any> {
