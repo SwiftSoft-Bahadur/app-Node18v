@@ -1,13 +1,15 @@
 version: '3'
 
 services:
-  angular-app:
-    image: node18-img
+  frontend-app:
+    build:
+      context: .
+      dockerfile: Dockerfile  # Replace with your actual Dockerfile name
     ports:
       - "8082:80"
     networks:
       - allNet
-      
+
   nginx-reverse-proxy:
     image: nginx
     ports:
