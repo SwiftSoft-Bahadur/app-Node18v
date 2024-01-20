@@ -24,5 +24,11 @@ FROM nginx:latest
 # Copy the build output to replace the default nginx contents.
 COPY --from=build /usr/local/app/dist/app-node18v/browser /usr/share/nginx/html
 
+# Copy custom nginx.conf file
+COPY nginx.conf /etc/nginx/nginx.conf
+
 # Expose port 80
 EXPOSE 80
+
+# Start Nginx
+CMD ["nginx", "-g", "daemon off;"]
