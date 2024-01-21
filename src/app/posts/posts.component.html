@@ -1,1 +1,37 @@
-<p>posts works!</p>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<div class="container-fluid mt-2">
+  <div class="row">
+      <!-- Table Section -->
+    <div class="col-md mt-4">
+      <div class="card">
+        <h2 class="card-header text-center">Medicine List</h2>
+        <div class="card-body">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Medicine Name</th>
+                <th scope="col">Company</th>
+                <th scope="col">Price</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Expiry Date</th>
+                <th scope="col">Image</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Iterate over medicines and display them in rows -->
+              <tr *ngFor="let medicine of medicines">
+                <td>{{ medicine.medicineName }}</td>
+                <td>{{ medicine.medicineCompany }}</td>
+                <td>{{ medicine.medicinePrice }}</td>
+                <td>{{ medicine.medicineQty }}</td>
+                <td>{{ medicine.expiry }}</td>
+                <td>{{ medicine.medicineImg }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
