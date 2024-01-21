@@ -1,9 +1,25 @@
-<h1>Angular Router App</h1>
-<nav>
-  <ul>
-    <li><a routerLink="/users" routerLinkActive="active" ariaCurrentWhenActive="page">Add Medicine</a></li>
-    <li><a routerLink="/posts" routerLinkActive="active" ariaCurrentWhenActive="page">List Medicine</a></li>
-  </ul>
-</nav>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <!-- Add this to your component's HTML file -->
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<div class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" href="#">Your App Name</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a routerLink="/users" routerLinkActive="active" ariaCurrentWhenActive="page" class="nav-link">Add Medicine</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/posts" routerLinkActive="active" ariaCurrentWhenActive="page" class="nav-link">List Medicine</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
 <!-- The routed views render in the <router-outlet>-->
 <router-outlet></router-outlet>
