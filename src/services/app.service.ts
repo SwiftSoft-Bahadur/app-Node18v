@@ -10,7 +10,7 @@ import { environment } from '../environments/environment';
 export class AppService {
 
   // proxy url
-  private apiUrl = environment.apiUrl;
+  private apiUrl = 'http://nida.com/api';
 
   constructor(private http: HttpClient) {}
 
